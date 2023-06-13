@@ -54,7 +54,7 @@ export default function App() {
     <ListItem>
       <ListItemIcon><SearchIcon color="primary" /></ListItemIcon>
       <ListItemText>
-        <TextField inputRef={keyref} autoFocus fullWidth variant="standard" margin="normal" onChange={render} />
+        <TextField inputRef={keyref} autoFocus fullWidth placeholder="palavra" variant="standard" margin="normal" onChange={render} />
       </ListItemText>
       <ListItemSecondaryAction>
         <IconButton onClick={fsav}><DownloadIcon color="primary" /></IconButton>
@@ -63,10 +63,10 @@ export default function App() {
     <ListItem>
       <ListItemIcon><NotesIcon color="primary" /></ListItemIcon>
       <ListItemText>
-        <TextField inputRef={valref} fullWidth margin="normal" placeholder="palavra" disabled={(keyref.current?.value?.length ?? 0) === 0} onChange={render} />
+        <TextField inputRef={valref} fullWidth placeholder="explicação" margin="normal" disabled={(keyref.current?.value?.length ?? 0) === 0} onChange={render} />
       </ListItemText>
       <ListItemSecondaryAction>
-        <IconButton onClick={fadd} placeholder="explicação" disabled={(keyref.current?.value?.length ?? 0) === 0 || (valref.current?.value?.length ?? 0) === 0}><AddIcon color="primary" /></IconButton>
+        <IconButton onClick={fadd} disabled={(keyref.current?.value?.length ?? 0) === 0 || (valref.current?.value?.length ?? 0) === 0}><AddIcon color="primary" /></IconButton>
       </ListItemSecondaryAction>
     </ListItem>
     {
