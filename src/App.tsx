@@ -7,7 +7,6 @@ import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import AbcIcon from '@mui/icons-material/Abc';
 import SearchIcon from '@mui/icons-material/Search';
-import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from '@mui/icons-material/Delete';
 import NotesIcon from '@mui/icons-material/Notes';
 import AddIcon from '@mui/icons-material/Add';
@@ -64,10 +63,10 @@ export default function App() {
     <ListItem>
       <ListItemIcon><NotesIcon color="primary" /></ListItemIcon>
       <ListItemText>
-        <TextField inputRef={valref} fullWidth margin="normal" disabled={(keyref.current?.value?.length ?? 0) == 0} onChange={render} />
+        <TextField inputRef={valref} fullWidth margin="normal" disabled={(keyref.current?.value?.length ?? 0) === 0} onChange={render} />
       </ListItemText>
       <ListItemSecondaryAction>
-        <IconButton onClick={fadd} disabled={(keyref.current?.value?.length ?? 0) == 0 || (valref.current?.value?.length ?? 0) == 0}><AddIcon color="primary" /></IconButton>
+        <IconButton onClick={fadd} disabled={(keyref.current?.value?.length ?? 0) === 0 || (valref.current?.value?.length ?? 0) === 0}><AddIcon color="primary" /></IconButton>
       </ListItemSecondaryAction>
     </ListItem>
     {
